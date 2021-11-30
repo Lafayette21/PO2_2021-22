@@ -1,0 +1,29 @@
+Na pewnej krakowskiej uczelni technicznej na wydziale fizyki projektowano złożony układ elektroniczny. Niestety okazało się, że pewne podzespoły produkuje jedynie producent z kraju słynącego z produkcji tanich lecz niezbyt dobrych produktów. Na szczęście udało się układ przeprojektować tak, że "rozrzut" parametrów produkcyjnych można kompensować używając rzeczonych elementów dzieląc je na dwie równe grupy. W tym celu jednak należy przeprowadzić testy elementów na zasadzie "każdy z każdym" - czyli dany element musi raz "wystąpić" przeciwko każdemu innemu będąc w grupie przeciwnej. Przykład: mamy 4 elementy (i numerujemy je 1,...,4). A więc testy:
+
+1 2 vs 3 4
+1 3 vs 2 4
+
+są poprawne bo 1 było przetestowane "przeciwko" 3 i 4 (pierwszy test) oraz 2 (drugi test), 2 było przetestowane przeciwko 1 (drugi test) oraz 3 i 4 (pierwszy test) ... itd.
+
+Wejście:
+
+W pierwszym wierszu znajdują się dwie liczby: liczba elementów (n – jest to zawsze liczba parzysta) oraz zaplanowana liczba testów (m) . Każdy z kolejnych "m" wierszy zawiera składy grup. N/2 pierwszych elementów to pierwsza grupa zaś ostatnie n/2 to druga grupa.
+
+Wyjście:
+
+Na wyjściu powinno się pojawić tylko jedno słowo "TAK" jeśli elementy zostaną przetestowane prawidłowo lub "NIE" w przeciwnym przypadku.
+
+Przykład:
+
+4 2
+1 2 3 4
+1 3 2 4
+
+daje wynik TAK zaś:
+
+6 3
+3 5 2 4 6 1
+1 4 5 2 3 6
+4 5 6 1 2 3
+
+daje wynik NIE (elementy 2 i 3 zawsze są w tej samej grupie).
